@@ -67,7 +67,7 @@ R = numpy.array(R)
 
 N = len(R)
 M = len(R[0])
-K = 3
+K = 1
 
 P = numpy.random.rand(N, K)
 Q = numpy.random.rand(M, K)
@@ -78,33 +78,34 @@ print(nP)
 print(nQ.T)
 print(nR)
 
-m1 = 'star_wars'
-m2 = 'eternal'
-m3 = 'russian_institute'
-m4 = 'lotr'
-m5 = 'hitch'
-m6 = 'carmen_electra'
-
-R = [
-    [5,1,5,0,0,0],
-    [0,0,5,5,0,5],
-    [5,0,0,5,1,0],
-    [1,5,5,1,0,0],
-    [0,5,0,0,5,0],
-    [5,0,5,5,0,5],
-    [0,5,0,0,5,0],
-    [0,0,5,5,0,0]
-]
-
-N = len(R)
-M = len(R[0])
-K = 1
-
-P = numpy.random.rand(N, K)
-Q = numpy.random.rand(M, K)
-
-nP, nQ = matrix_factorization(R, P, Q, K)
-nR = numpy.dot(nP, nQ.T)
-# print(nP)
-# print(nQ.T)
-print(nR)
+# m1 = 'star_wars'
+# m2 = 'eternal'
+# m3 = 'russian_institute'
+# m4 = 'lotr'
+# m5 = 'hitch'
+# m6 = 'carmen_electra'
+#
+# R = [
+#     [5,1,5,0,0,0],
+#     [0,0,5,5,0,5],
+#     [5,0,0,5,1,0],
+#     [1,5,5,1,0,0],
+#     [0,5,0,0,5,0],
+#     [5,0,5,5,0,5],
+#     [0,5,0,0,5,0],
+#     [0,0,5,5,0,0],
+#     [0,5,5,0,0,0]
+# ]
+#
+# N = len(R)
+# M = len(R[0])
+# K = 1
+#
+# P = numpy.random.rand(N, K)
+# Q = numpy.random.rand(M, K)
+#
+# nP, nQ = matrix_factorization(R, P, Q, K, steps=10000)
+# nR = numpy.dot(nP, nQ.T)
+# # print(nP)
+# # print(nQ.T)
+# print(nR)
