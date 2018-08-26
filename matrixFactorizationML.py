@@ -1,6 +1,5 @@
 import numpy
 
-import pandas as pd
 
 def matrix_factorization(R, P, Q, K, steps=5000, alpha=0.0002, beta=0.02):
     Q = Q.T
@@ -25,30 +24,35 @@ def matrix_factorization(R, P, Q, K, steps=5000, alpha=0.0002, beta=0.02):
     return P, Q.T
 
 
-# R = [
-#      [5,3,0,1],
-#      [4,0,0,1],
-#      [1,1,0,5],
-#      [1,0,0,4],
-#      [0,1,5,4],
-#     ]
-#
-# R = numpy.array(R)
-#
-# N = len(R)
-# M = len(R[0])
-# K = 2
-#
-# P = numpy.random.rand(N,K)
-# Q = numpy.random.rand(M,K)
-#
-# nP, nQ = matrix_factorization(R, P, Q, K)
-# nR = numpy.dot(nP, nQ.T)
+R = [
+    [5, 3, 0, 1],
+    [4, 0, 0, 1],
+    [1, 1, 0, 5],
+    [1, 0, 0, 4],
+    [0, 1, 5, 4],
+]
 
-# print(nR)
+R = numpy.array(R)
+
+N = len(R)
+M = len(R[0])
+K = 2
+
+P = numpy.random.rand(N, K)
+Q = numpy.random.rand(M, K)
+
+nP, nQ = matrix_factorization(R, P, Q, K)
+nR = numpy.dot(nP, nQ.T)
+
+print(nR)
+
+# ratings = pd.read_csv("./data/ml-100k/smallData_u.data", sep='\t', lineterminator='\r')
+
+# print(ratings.head())
 
 
+cd = []
 
-ratings = pd.read_csv("./data/ml-100k/smallData_u.data", sep='\t', lineterminator='\r')
+cd.append(3)
 
-print(ratings.head())
+print(cd)
